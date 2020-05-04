@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[15]:
+# In[1]:
 
 
 # NBAPlayoffSimulation.py
@@ -52,7 +52,7 @@ def gamesSim(ns):
     print('Tie ', tie/(team1win+team2win+tie), '%')
     return gamesout
 
-gamesSim(10)
+gamesSim(7)
 
 
 # In[ ]:

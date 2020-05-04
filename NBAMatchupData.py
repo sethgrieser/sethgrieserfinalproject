@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[17]:
+# In[1]:
 
 
 # NBAMatchupData.py
@@ -47,35 +47,6 @@ print("Lakers Points Mean ", lalmeanpts)
 print("Lakers Points SD ", lalpts)
 print("Memphis Points Mean ", memmeanpts)
 print("Memphis Points SD ", mempts)
-
-def gameSim():
-    LALScore = (rnd.gauss(lalmeanpts,lalmeanpts))
-    MEMScore = (rnd.gauss(memmeanpts,mempts))
-    if int(round(LALScore)) > int(round(MEMScore)):
-        return 1
-    elif int(round(LALScore)) < int(round(MEMScore)):
-        return -1
-    else: return 0
-
-def gamesSim(ns):
-    gamesout = []
-    team1win = 0
-    team2win = 0
-    tie = 0
-    for i in range(ns):
-        gm = gameSim()
-        gamesout.append(gm)
-        if gm == 1:
-            team1win +=1 
-        elif gm == -1:
-            team2win +=1
-        else: tie +=1 
-    print('LAL Win ', team1win/(team1win+team2win+tie),'%')
-    print('MEM Win ', team2win/(team1win+team2win+tie),'%')
-    print('Tie ', tie/(team1win+team2win+tie), '%')
-    return gamesout
-
-gamesSim(7)
 
 
 # In[ ]:
